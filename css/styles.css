@@ -1,0 +1,300 @@
+/* ---------------------------
+  Tipografías & reset ligero
+----------------------------*/
+:root{
+  --aqua-1: #0ea5e9;
+  --aqua-2: #60d7ff;
+  --glass: rgba(255,255,255,0.08);
+  --card-bg: rgba(255,255,255,0.06);
+  --accent: #75d5ff;
+}
+*{box-sizing:border-box}
+body{
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  background: linear-gradient(180deg,#f7feff 0%, #e9fbff 100%);
+  color: #073b4c;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* NAV */
+.navbar-glass{
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.25));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(10,40,60,0.06);
+  padding: .8rem 1rem;
+}
+.navbar .logo{
+  color: #023e5a;
+  font-size: 1.25rem;
+  letter-spacing: .4px;
+}
+.nav-link{ color:#02485f !important; font-weight:600 }
+
+/* HERO */
+.hero-section{
+  position:relative;
+  height:88vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-top:56px;
+  overflow:hidden;
+  background: linear-gradient(135deg, rgba(14,165,233,0.18), rgba(96,215,255,0.12));
+}
+
+/* waves */
+.wave-top, .wave-bottom{
+  position:absolute;
+  left:0;
+  width:100%;
+  pointer-events:none;
+  z-index:1;
+}
+.wave-top{ top:0; transform:translateY(-1px) }
+.wave-bottom{ bottom:0; transform:translateY(1px) }
+
+.wave-svg{ width:100%; height:120px; display:block; }
+#waveTop{ fill: url(#gradTop); opacity:0.85; transform-origin: center; animation: waveAnim 6s ease-in-out infinite; }
+#waveBottom{ fill: url(#gradBot); opacity:0.9; transform-origin: center; animation: waveAnim 7s ease-in-out infinite reverse; }
+
+/* define gradients inside CSS via fallback shapes */
+.wave-svg path{ filter: blur(.2px); }
+
+/* HERO content */
+.hero-content{ position:relative; z-index:2; max-width:1000px; padding: 30px; }
+.hero-title{ color:#022f3a; font-size: clamp(28px, 4.5vw, 52px); line-height:1.02; }
+.hero-sub{ color: #044a5b; opacity:0.92; font-size:1.15rem; }
+
+/* hero features */
+.hero-features{ display:flex; gap:24px; justify-content:center; margin-top:18px; flex-wrap:wrap; }
+.feat-item{ display:flex; gap:8px; align-items:center; color:#044a5b; background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35)); padding:8px 14px; border-radius:999px; box-shadow: 0 6px 18px rgba(2,48,65,0.06); }
+.feat-item i{ color:var(--aqua-1); font-size:1.15rem }
+
+/* section titles */
+.section{ padding: 80px 0; }
+.section-glass{ background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.85)); }
+.section-gallery{ padding:100px 0; background: linear-gradient(180deg,#e7fbff, #ffffff); }
+
+/* cards (glass) */
+.card.service-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.5));
+  border: 1px solid rgba(7,59,76,0.06);
+  border-radius: 14px;
+  transition: transform .35s cubic-bezier(.2,.9,.2,1), box-shadow .35s;
+}
+.service-card:hover{ transform: translateY(-10px); box-shadow: 0 18px 40px rgba(2,48,65,0.08) }
+.icon-wrap i{ font-size:2.2rem; color:var(--aqua-1) }
+
+/* MASONRY gallery (CSS columns) */
+.masonry{
+  column-count: 3;
+  column-gap: 1rem;
+  margin: 0 auto;
+  max-width:1200px;
+}
+@media (max-width: 992px){ .masonry{ column-count:2 } }
+@media (max-width: 576px){ .masonry{ column-count:1 } }
+
+.masonry-item{
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  border-radius:12px;
+  overflow:hidden;
+  background:var(--card-bg);
+  box-shadow: 0 8px 30px rgba(2,48,65,0.06);
+  transition: transform .35s, box-shadow .35s;
+}
+.masonry-item img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  transform-origin:center;
+  transition: transform .5s ease, filter .4s;
+  filter: saturate(1.02) contrast(1.02);
+}
+.masonry-item:hover{ transform: translateY(-6px); box-shadow: 0 30px 50px rgba(2,48,65,0.09) }
+.masonry-item:hover img{ transform: scale(1.06) }
+
+/* company photo glass */
+.glass-photo{
+  width:340px;
+  height:220px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(13,110,200,0.12), rgba(96,215,255,0.09));
+  border-radius:14px;
+  border: 1px solid rgba(7,59,76,0.06);
+  box-shadow: 0 12px 30px rgba(2,48,65,0.06);
+  background-image: url('https://images.unsplash.com/photo-1505739775614-616d5ac2afd9');
+  background-size:cover; background-position:center;
+}
+
+/* footer */
+.footer{
+  background: linear-gradient(180deg,#f1fafe,#e6fbff);
+  color:#023e4a;
+  border-top: 1px solid rgba(2,48,65,0.03);
+}
+
+/* WhatsApp glass floating */
+.wpp-glass{
+  position: fixed;
+  right: 28px;
+  bottom: 26px;
+  width: 60px;
+  height: 60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(7,59,76,0.06);
+  box-shadow: 0 10px 30px rgba(2,48,65,0.08);
+  color: var(--aqua-1);
+  font-size:1.6rem;
+  transition: transform .25s, box-shadow .25s;
+  z-index:999;
+}
+.wpp-glass:hover{ transform: translateY(-6px); box-shadow: 0 28px 60px rgba(2,48,65,0.12) }
+
+/* small responsive tweaks */
+@media (max-width:768px){
+  .hero-features{ gap:12px; }
+  .hero-content{ padding:18px }
+  .masonry{ column-count:1 }
+}
+
+/* --- subtle animations --- */
+.hero-title{ opacity:0; transform: translateY(12px); animation: appear .9s forwards .35s }
+.hero-sub{ opacity:0; transform: translateY(10px); animation: appear .9s forwards .6s }
+.btn-primary, .btn-outline-light{ opacity:0; transform: translateY(10px); animation: appear .9s forwards .85s }
+
+@keyframes appear{
+  to{ opacity:1; transform:none }
+}
+
+/* wave animation via CSS transforms (subtle) */
+@keyframes waveAnim{
+  0%{ transform: translateX(0) translateY(0) }
+  50%{ transform: translateX(-6%) translateY(3px) }
+  100%{ transform: translateX(0) translateY(0) }
+}
+.btn-presupuesto-premium {
+    background: rgba(0, 0, 0, 0.55);  /* Más oscuro */
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 28px;
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.btn-presupuesto-premium:hover {
+    background: rgba(0, 0, 0, 0.85); /* Mucho más visible en hover */
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+/* -----------------------------------------------------
+   EFECTO GOTAS DE AGUA · Premium Water Drops
+------------------------------------------------------*/
+.water-drops {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.drop {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(3px);
+    border-radius: 50%;
+    animation: fallDrop 6s linear infinite;
+    filter: blur(1px);
+}
+/* -------------------------------
+   GOTAS DE AGUA HERO
+--------------------------------*/
+.water-drops-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 3; /* Encima del fondo, debajo del texto */
+}
+
+.drop {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    animation: fallDrop linear infinite;
+}
+
+@keyframes fallDrop {
+    0% {
+        transform: translateY(-80px) scale(0.8);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(95vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* -------------------------------
+   LIGHTBOX PARA GALERÍA
+--------------------------------*/
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
