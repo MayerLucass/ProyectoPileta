@@ -1,227 +1,265 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Piletas </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Piletas | Lucas Mayer</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <!-- NAV -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/5493562410512" target="_blank" class="wpp-glass-btn">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold logo" href="">Piletas Mayer</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <a class="navbar-brand" href="#">Piletas</a>
+
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#empresa">Empresa</a></li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+</header>
+
+
+<main>
 
     <!-- HERO -->
-    <header id="inicio" class="hero-section d-flex align-items-center">
-
-        <!-- 🔵 CONTENEDOR DE GOTAS DE AGUA -->
-        <div class="water-drops-hero"></div>
-
-        <!-- Olas arriba -->
-        <div class="wave-top">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="wave-svg">
-                <path id="waveTop" d="M0,40 C240,120 480,0 720,40 C960,80 1200,20 1440,60 L1440 0 L0 0 Z"></path>
-            </svg>
+    <section id="hero">
+        <div>
+            <h1>Diseño y Construcción de Piletas</h1>
+            <p>
+                Creamos piletas modernas, funcionales y adaptadas a cada espacio.
+                Calidad, diseño y experiencia.
+            </p>
         </div>
-
-        <div class="container text-center hero-content">
-            <h1 class="display-4 fw-bold hero-title">Pilatas Mayer</h1>
-            <p class="lead hero-sub mb-4">Diseño y construcción premium · terminaciones impecables ·</p>
-
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#galeria" class="btn btn-primary btn-lg">Ver trabajos</a>
-
-                <a href="https://wa.me/549351XXXXXXX?text=¡Hola!%20Quiero%20solicitar%20un%20presupuesto%20para%20una%20pileta."
-                    target="_blank" class="btn btn-outline-light btn-lg">
-                    Solicitar presupuesto
-                </a>
-            </div>
-
-            <div class="hero-features mt-5">
-                <div class="feat-item">
-                    <i class="bi bi-palette"></i>
-                    <span>Diseño a medida</span>
-                </div>
-                <div class="feat-item">
-                    <i class="bi bi-gear"></i>
-                    <span>Materiales premium</span>
-                </div>
-                <div class="feat-item">
-                    <i class="bi bi-clock-history"></i>
-                    <span>Garantía y servicio</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Olas abajo -->
-        <div class="wave-bottom">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="wave-svg">
-                <path id="waveBottom" d="M0,60 C240,0 480,120 720,60 C960,0 1200,120 1440,60 L1440 120 L0 120 Z"></path>
-            </svg>
-        </div>
-    </header>
+    </section>
 
     <!-- SERVICIOS -->
-    <section id="servicios" class="section section-glass py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-4">Nuestros Servicios</h2>
+    <section id="servicios">
+        <div class="container text-center">
+            <h2 class="mb-4">Nuestros servicios</h2>
 
-            <div class="row g-4">
+            <div class="row g-4 mt-4">
                 <div class="col-md-4">
-                    <div class="card service-card p-4">
-                        <div class="icon-wrap mb-3"><i class="bi bi-house-fill"></i></div>
-                        <h5 class="mb-2">Construcción a medida</h5>
-                        <p class="mb-0">Piletas de hormigón con diseño personalizado y terminaciones premium.</p>
+                    <div class="project-card h-100">
+                        <i class="bi bi-water fs-1 mb-3"></i>
+                        <h4>Construcción</h4>
+                        <p>Diseño y construcción de piletas a medida.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card service-card p-4">
-                        <div class="icon-wrap mb-3"><i class="bi bi-droplet-half"></i></div>
-                        <h5 class="mb-2">Revestimientos & venecitas</h5>
-                        <p class="mb-0">Variedad de acabados y materiales resistentes a la intemperie.</p>
+                    <div class="project-card h-100">
+                        <i class="bi bi-tools fs-1 mb-3"></i>
+                        <h4>Mantenimiento</h4>
+                        <p>Reparación y puesta a punto.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card service-card p-4">
-                        <div class="icon-wrap mb-3"><i class="bi bi-wrench"></i></div>
-                        <h5 class="mb-2">Reparación</h5>
-                        <p class="mb-0">Refracciones y ampliaciones de piscinas.</p>
+                    <div class="project-card h-100">
+                        <i class="bi bi-palette fs-1 mb-3"></i>
+                        <h4>Diseño</h4>
+                        <p>Estética moderna y materiales de primera calidad.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GALERÍA -->
-    <section id="galeria" class="section-gallery py-5">
+    <!-- GALERÍA DE PROYECTOS -->
+    <section id="proyectos">
         <div class="container">
-            <h2 class="section-title text-center text-dark mb-4">Galería de Proyectos</h2>
-            <p class="text-center text-muted mb-4">El cliente puede subir fotos de sus trabajos — vista dinámica</p>
+            <h2 class="text-center mb-4">Trabajos realizados</h2>
 
-            <div class="masonry gallery">
-                <div class="masonry-item"><img src="./IMAGENE/IMAGEN 1.png" alt="p1" class="zoom-img"></div>
-                <div class="masonry-item"><img src="./IMAGENE/IMAGEN 7.jpg" alt="p2" class="zoom-img"></div>
-                <div class="masonry-item"><img src="./IMAGENE/IMAGENE 2.png" alt="p3" class="zoom-img"></div>
-                <div class="masonry-item"><img src="./IMAGENE/IMAGENE 3.png" alt="p4" class="zoom-img"></div>
-                <div class="masonry-item"><img src="./IMAGENE/IMAGENE 4.png" alt="p5" class="zoom-img"></div>
-                <div class="masonry-item"><img src="./IMAGENE/IMAGENE 5.png" alt="p6" class="zoom-img"></div>
+            <p class="text-center w-75 mx-auto mb-5">
+                Algunas piletas realizadas para nuestros clientes.
+            </p>
+
+            <div class="row g-4 gallery">
+
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="./IMAGENE/IMAGEN 1.png" alt="Pileta 1" class="img-click">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="./IMAGENE/IMAGENE 2.png " alt="Pileta 2" class="img-click">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="./IMAGENE/IMAGENE 3.png" alt="Pileta 3" class="img-click">
+                    </div>
+                </div>
+
+                                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="./IMAGENE/IMAGENE 4.png" alt="Pileta 3" class="img-click">
+                    </div>
+                </div>
+
+                                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="./IMAGENE/IMAGENE 5.png" alt="Pileta 3" class="img-click">
+                    </div>
+                </div>
+
+                                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="./IMAGENE/IMAGEN 7.jpg" alt="Pileta 3" class="img-click">
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Modal Zoom -->
-    <div class="modal fade" id="zoomModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-transparent border-0 shadow-none">
-                <img id="zoomModalImg" class="img-fluid rounded">
-            </div>
-        </div>
+    <!-- MODAL IMAGEN -->
+    <div id="imgModal" class="img-modal">
+        <span class="close-modal">&times;</span>
+        <img class="img-modal-content" id="imgModalContent">
     </div>
 
-    <!-- EMPRESA -->
-    <section id="empresa" class="section section-glass py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-4">Sobre la Empresa</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="lead mb-3">Piletas Mayer lleva más de 25 años creando proyectos únicos. Combinamos diseño
-                        arquitectónico, ingeniería y materiales de alta gama para entregar piletas que perduran en el tiempo.</p>
-                    <ul class="list-unstyled">
-                        <li>• Equipo profesional </li>
-                    </ul>
-                </div>
-<div class="col-md-6 text-center">
-  <div class="glass-photo mx-auto">
-    <img src="./IMAGENE/Gemini_Generated_Image_t1vb0xt1vb0xt1vb (1).png" alt="Foto de la empresa">
-  </div>
-</div>
+    <!-- SOBRE NOSOTROS -->
+<section id="sobre-nosotros">
+    <div class="container">
+        <div class="row align-items-center">
 
+            <!-- TEXTO -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h2>Sobre nosotros</h2>
+                <p>
+                    Somos un equipo especializado en el diseño y construcción de piletas,
+                    con experiencia en proyectos residenciales y personalizados.
+                </p>
+                <p>
+                    Nos enfocamos en combinar <strong>funcionalidad, estética y calidad</strong>,
+                    utilizando materiales durables y técnicas modernas para lograr
+                    resultados que superen las expectativas de nuestros clientes.
+                </p>
+
+                <ul class="list-unstyled mt-3">
+                    <li>✔ Atención personalizada</li>
+                    <li>✔ Diseño a medida</li>
+                    <li>✔ Materiales de primera calidad</li>
+                    <li>✔ Cumplimiento</li>
+                </ul>
             </div>
-             
+
+            <!-- INFO / DESTACADOS -->
+            <div class="col-md-6">
+                <div class="row text-center">
+
+                    <div class="col-6 mb-4">
+                        <div class="project-card h-100">
+                            <i class="bi bi-award fs-1 mb-2"></i>
+                            <h5>Experiencia</h5>
+                            <p>Proyectos realizados con altos estándares.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 mb-4">
+                        <div class="project-card h-100">
+                            <i class="bi bi-people fs-1 mb-2"></i>
+                            <h5>Clientes felices</h5>
+                            <p>Relación basada en confianza y resultados.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <div class="container text-center">
+            <h2>Contacto</h2>
+            <p class="mb-4">
+                ¿Querés tu pileta soñada? Escribinos y te asesoramos.
+            </p>
+
+            <a href="https://wa.me/5493562410512" target="_blank" class="btn btn-main">
+                Contactar por WhatsApp
+            </a>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer py-4">
-        <div class="container text-center small">
-            © <span id="year"></span> LucasMayer · Todos los derechos reservados
-        </div>
-    </footer>
+</main>
 
-    <!-- WHATSAPP FLOAT -->
-    <a class="wpp-glass" href="https://wa.me/549XXXXXXXXXXX" target="_blank" aria-label="WhatsApp">
-        <i class="bi bi-whatsapp"></i>
-    </a>
+<!-- FOOTER -->
+<footer class="text-center">
+    © 2025 Proyecto Piletas | Diseñado por Lucas Mayer
+</footer>
 
-    <!-- BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- 🔵 SCRIPT GOTAS DE AGUA -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const container = document.querySelector(".water-drops-hero");
+<script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("imgModalContent");
+    const closeBtn = document.querySelector(".close-modal");
 
-            for (let i = 0; i < 30; i++) {
-                const drop = document.createElement("div");
-                drop.classList.add("drop");
-
-                drop.style.left = Math.random() * 100 + "%";
-                drop.style.animationDuration = (2 + Math.random() * 3) + "s";
-                drop.style.opacity = (0.1 + Math.random() * 0.4);
-
-                container.appendChild(drop);
-            }
+    document.querySelectorAll(".img-click").forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "flex";
+            modalImg.src = img.src;
         });
-    </script>
+    });
 
-    <!-- 🟦 SCRIPT ZOOM DE IMÁGENES -->
-    <script>
-        const zoomImgs = document.querySelectorAll('.zoom-img');
-        const zoomModalImg = document.getElementById('zoomModalImg');
-        const zoomModal = new bootstrap.Modal(document.getElementById('zoomModal'));
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
 
-        zoomImgs.forEach(img => {
-            img.addEventListener('click', () => {
-                zoomModalImg.src = img.src;
-                zoomModal.show();
-            });
-        });
-    </script>
-
-    <!-- Año -->
-    <script>
-        document.getElementById('year').innerText = new Date().getFullYear();
-    </script>
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
 
 </body>
-
 </html>
