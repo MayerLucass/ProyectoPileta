@@ -1,443 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Piletas | Lucas Mayer</title>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="./IMAGENE/LOGO 2.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071d29">
+  <meta name="description" content="Diseño y construcción de piletas a medida y movimiento de suelos. Conocé nuestros trabajos y pedí tu presupuesto.">
+  <title>Proyecto Piletas | Diseñamos tu lugar favorito</title>
+  <link rel="icon" href="IMAGENE/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/app.js"></script>
 </head>
-<!-- BOTÓN WHATSAPP -->
-<a href="https://wa.me/5493562410512" target="_blank" class="wpp-glass-btn">
-    <i class="bi bi-whatsapp"></i>
-</a>
-
-<header>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-    <img src="./IMAGENE/logo.png"
-         alt="Piletas Construcciones"
-         class="logo-navbar">
-
-</a>
-
-            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hero">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre-nosotros">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicios">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#proyectos">Proyectos</a>
-                    </li>
-                                        <li class="nav-item">
-                        <a class="nav-link" href="#movimiento-suelos">Movimiento de Suelos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<body>
+  <a class="skip" href="#contenido">Ir al contenido</a>
+  <header class="site-header" id="inicio">
+    <nav class="nav wrap" aria-label="Principal">
+      <a class="brand" href="#inicio"><img src="IMAGENE/logo.png" alt="Proyecto Piletas"><span>PROYECTO <b>PILETAS</b></span></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#servicios">Servicios</a><a href="#proyectos">Trabajos</a><a href="#nosotros">Nosotros</a><a href="#movimiento">Movimiento de suelos</a>
+        <a class="nav-cta" href="#contacto">Pedir presupuesto <span aria-hidden="true">↗</span></a>
+      </div>
     </nav>
-</header>
-
-
-<main>
-
-    <!-- HERO -->
-    <section id="hero">
-        <div>
-            <h1>Diseño y Construcción de Piletas</h1>
-            <p>
-                Creamos piletas modernas, funcionales y adaptadas a cada espacio.
-                Calidad, diseño y experiencia.
-            </p>
-        </div>
+  </header>
+  <main id="contenido">
+    <section class="hero">
+      <div class="hero-photo" role="img" aria-label="Pileta realizada por Proyecto Piletas"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content wrap">
+        <div class="eyebrow light"><span class="dot"></span> DISEÑO · CONSTRUCCIÓN · MOVIMIENTO DE SUELOS</div>
+        <h1>El verano empieza <em>en tu casa.</em></h1>
+        <p>Diseñamos y construimos piletas que transforman espacios en lugares para disfrutar todos los días.</p>
+        <div class="hero-actions"><a class="button primary" href="#proyectos">Explorar trabajos <span aria-hidden="true">↗</span></a><a class="button outline" href="#contacto">Hablemos de tu proyecto</a></div>
+      </div>
+      <a class="scroll-cue" href="#servicios">DESLIZÁ PARA DESCUBRIR <span aria-hidden="true">↓</span></a>
+      <div class="hero-index">01 / 04</div>
     </section>
-
-    <!-- SERVICIOS -->
-    <section id="servicios">
-        <div class="container text-center">
-            <h2 class="mb-4">Nuestros servicios</h2>
-
-            <div class="row g-4 mt-4">
-                <div class="col-md-4">
-                    <div class="project-card h-100">
-                        <i class="bi bi-water fs-1 mb-3"></i>
-                        <h4>Construcción</h4>
-                        <p>Diseño y construcción de piletas a medida.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project-card h-100">
-                        <i class="bi bi-tools fs-1 mb-3"></i>
-                        <h4>Mantenimiento</h4>
-                        <p>Reparación y puesta a punto.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="project-card h-100">
-                        <i class="bi bi-palette fs-1 mb-3"></i>
-                        <h4>Diseño</h4>
-                        <p>Estética moderna y materiales de primera calidad.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="intro wrap reveal" id="servicios">
+      <div class="section-top"><span class="eyebrow">01 / LO QUE HACEMOS</span><span class="section-line"></span></div>
+      <div class="intro-grid"><h2>De una idea a <em>tu lugar favorito.</em></h2><p>Nos ocupamos de cada detalle para que tu pileta se integre a tu espacio y a la forma en que querés vivirlo.</p></div>
+      <div class="services">
+        <article class="service"><div class="service-no">01 <span aria-hidden="true">↗</span></div><div class="service-icon" aria-hidden="true">◌</div><h3>Diseño a medida</h3><p>Cada espacio es distinto. Pensamos la forma, los materiales y cada terminación para vos.</p></article>
+        <article class="service"><div class="service-no">02 <span aria-hidden="true">↗</span></div><div class="service-icon" aria-hidden="true">▱</div><h3>Construcción</h3><p>Llevamos tu proyecto a la realidad con atención en cada etapa de la obra.</p></article>
+        <article class="service"><div class="service-no">03 <span aria-hidden="true">↗</span></div><div class="service-icon" aria-hidden="true">≈</div><h3>Puesta a punto</h3><p>Reparación y mantenimiento para volver a disfrutar la pileta como el primer día.</p></article>
+      </div>
     </section>
-
-    <!-- GALERÍA DE PROYECTOS -->
-    <section id="proyectos">
-        <div class="container">
-            <h2 class="text-center mb-4">Trabajos realizados</h2>
-
-            <p class="text-center w-75 mx-auto mb-5">
-                Algunas piletas realizadas para nuestros clientes.
-            </p>
-
-            <div class="row g-4 gallery">
-
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="./IMAGENE/imagen 2.png" alt="Pileta 2" class="img-click">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="./IMAGENE/imagen 3.png" alt="Pileta 3" class="img-click">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="./IMAGENE/imagen 4.png" alt="Pileta 3" class="img-click">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="./IMAGENE/imagen 5.png" alt="Pileta 3" class="img-click">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="./IMAGENE/imagen 6.png" alt="Pileta 3" class="img-click">
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="./IMAGENE/imagen 7.png" alt="Pileta 3" class="img-click">
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="./IMAGENE/imagen 8.png" alt="Pileta 3" class="img-click">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- MODAL IMAGEN -->
-    <div id="imgModal" class="img-modal">
-        <span class="close-modal">&times;</span>
-        <img class="img-modal-content" id="imgModalContent">
-    </div>
-
-    <!-- SOBRE NOSOTROS -->
-<section id="sobre-nosotros">
-    <div class="container">
-        <div class="row align-items-center">
-
-            <!-- TEXTO -->
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h2>Sobre nosotros</h2>
-                <p>
-                    Somos un equipo especializado en el diseño y construcción de piletas,
-                    con experiencia en proyectos residenciales y personalizados.
-                </p>
-                <p>
-                    Nos enfocamos en combinar <strong>funcionalidad, estética y calidad</strong>,
-                    utilizando materiales durables y técnicas modernas para lograr
-                    resultados que superen las expectativas de nuestros clientes.
-                </p>
-
-                <ul class="list-unstyled mt-3">
-                    <li>✔ Atención personalizada</li>
-                    <li>✔ Diseño a medida</li>
-                    <li>✔ Materiales de primera calidad</li>
-                    <li>✔ Cumplimiento</li>
-                </ul>
-            </div>
-
-            <!-- INFO / DESTACADOS -->
-            <div class="col-md-6">
-                <div class="row text-center">
-
-                    <div class="col-6 mb-4">
-                        <div class="project-card h-100">
-                            <i class="bi bi-award fs-1 mb-2"></i>
-                            <h5>Experiencia</h5>
-                            <p>Proyectos realizados con altos estándares.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 mb-4">
-                        <div class="project-card h-100">
-                            <i class="bi bi-people fs-1 mb-2"></i>
-                            <h5>Clientes felices</h5>
-                            <p>Relación basada en confianza y resultados.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- MOVIMIENTO DE SUELOS -->
-<section id="movimiento-suelos">
-    <div class="container">
-        <div class="row align-items-center">
-
-            <!-- Imagen -->
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="./IMAGENE/Logo MAYER movientos de suelos.png "
-                     alt="Movimiento de suelos"
-                     class="img-fluid movimiento-img">
-            </div>
-
-            <!-- Texto -->
-            <div class="col-lg-6">
-                <span class="badge bg-info text-dark mb-3">
-                    Servicio Especializado
-                </span>
-
-                <h2>Movimiento de Suelos</h2>
-
-                <p>
-                    Realizamos trabajos de movimiento de suelos con maquinaria
-                    especializada para preparar el terreno de manera eficiente
-                    y segura, garantizando una base sólida para cada proyecto.
-                </p>
-
-                <p>
-                    Contamos con personal capacitado y equipos adecuados para
-                    excavaciones, nivelaciones, rellenos y preparación del
-                    terreno, adaptándonos a las necesidades de cada cliente.
-                </p>
-
-                <ul class="list-unstyled mt-4">
-                    <li>✅ Excavaciones</li>
-                    <li>✅ Nivelación de terrenos</li>
-                    <li>✅ Rellenos y compactación</li>
-                    <li>✅ Preparación para construcción de piletas</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-   <!-- CONTACTO -->
-<section id="contacto">
-    <div class="container">
-
-        <h2 class="text-center mb-4">
-            Solicitar información
-        </h2>
-
-        <p class="text-center mb-5">
-            Completá el formulario y te responderemos a la brevedad.
-        </p>
-
-        <div class="row justify-content-center">
-
-            <div class="col-lg-6">
-
-                <div class="project-card">
-
-                    <div class="mb-3">
-                        <label class="form-label">
-                            Nombre
-                        </label>
-
-                        <input
-                            type="text"
-                            id="nombre"
-                            class="form-control"
-                            placeholder="Ingrese su nombre">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">
-                            Teléfono
-                        </label>
-
-                        <input
-                            type="text"
-                            id="telefono"
-                            class="form-control"
-                            placeholder="Ingrese su teléfono">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">
-                            ¿Qué servicio necesita?
-                        </label>
-
-                        <select
-                            id="servicio"
-                            class="form-select">
-
-                            <option value="Construcción de una pileta">
-                                Construcción de una pileta
-                            </option>
-
-                            <option value="Movimiento de suelos">
-                                Movimiento de suelos
-                            </option>
-
-                            <option value="Construcción de pileta y movimiento de suelos">
-                                Ambos servicios
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                    <div class="mb-3">
-
-                        <label class="form-label">
-                            Comentarios
-                        </label>
-
-                        <textarea
-                            id="mensaje"
-                            class="form-control"
-                            rows="4"
-                            placeholder="Escriba su consulta"></textarea>
-
-                    </div>
-
-                    <button
-                        class="btn btn-main w-100"
-                        onclick="enviarWhatsApp()">
-
-                        <i class="bi bi-whatsapp"></i>
-
-                        Enviar por WhatsApp
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<script>
-
-function enviarWhatsApp() {
-
-    const numero = "3562410512"; // <-- Cambiá este número si querés otro
-
-    const nombre = document.getElementById("nombre").value.trim();
-    const telefono = document.getElementById("telefono").value.trim();
-    const servicio = document.getElementById("servicio").value;
-    const mensaje = document.getElementById("mensaje").value.trim();
-
-    if (nombre === "" || telefono === "" || servicio === "") {
-        alert("Por favor, completá tu nombre, teléfono y servicio.");
-        return;
-    }
-
-    const texto =
-`Hola, quisiera solicitar información.
-
-👤 Nombre: ${nombre}
-
-📞 Teléfono: ${telefono}
-
-🛠️ Servicio solicitado:
-${servicio}
-
-📝 Consulta:
-${mensaje}`;
-
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
-    window.open(url, "_blank");
-
-}
-
-</script>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="text-center">
-    © 2025 Proyecto Piletas | Diseñado por Lucas Mayer
-</footer>
-
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    const modal = document.getElementById("imgModal");
-    const modalImg = document.getElementById("imgModalContent");
-    const closeBtn = document.querySelector(".close-modal");
-
-    document.querySelectorAll(".img-click").forEach(img => {
-        img.addEventListener("click", () => {
-            modal.style.display = "flex";
-            modalImg.src = img.src;
-        });
-    });
-
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-</script>
-
+    <section class="work-section" id="proyectos"><div class="wrap">
+      <div class="section-top"><span class="eyebrow">02 / TRABAJOS REALIZADOS</span><span class="section-line"></span></div>
+      <div class="work-heading reveal"><div><h2>Obras que hablan <em>por sí solas.</em></h2><p>Un recorrido por algunos de los espacios que ayudamos a crear.</p></div><span class="work-count" id="work-count">Cargando proyectos…</span></div>
+      <div class="filters" role="group" aria-label="Filtrar trabajos"><button type="button" class="filter active" data-filter="Todos" aria-pressed="true">Todos</button><button type="button" class="filter" data-filter="Piletas" aria-pressed="false">Piletas</button><button type="button" class="filter" data-filter="Movimiento de suelos" aria-pressed="false">Movimiento de suelos</button></div>
+      <div class="gallery" id="gallery" aria-live="polite"></div>
+    </div></section>
+    <section class="about wrap" id="nosotros"><div class="about-image reveal"><img loading="lazy" src="IMAGENE/imagen%203.png" alt="Trabajo de construcción de pileta"><span>HECHO PARA DISFRUTAR</span></div><div class="about-copy reveal"><span class="eyebrow">03 / SOBRE NOSOTROS</span><h2>Una pileta. <em>Infinitos momentos.</em></h2><p>Somos un equipo dedicado al diseño y construcción de piletas residenciales y proyectos personalizados. Escuchamos lo que imaginás y trabajamos para convertirlo en un espacio que quieras compartir.</p><p>Combinamos funcionalidad, estética y materiales durables, con un trato cercano de principio a fin.</p><a class="text-link" href="#contacto">Contanos tu idea <span aria-hidden="true">↗</span></a></div></section>
+    <section class="earth" id="movimiento"><div class="wrap earth-grid"><div class="earth-copy reveal"><span class="eyebrow light">04 / PREPARAMOS EL TERRENO</span><h2>Todo gran proyecto <em>empieza por la base.</em></h2><p>Realizamos movimiento de suelos para preparar tu terreno de forma eficiente: excavación, nivelación, relleno y compactación.</p><a class="button primary" href="#contacto">Consultar por este servicio <span aria-hidden="true">↗</span></a></div><div class="earth-visual reveal"><img loading="lazy" src="IMAGENE/Logo%20MAYER%20movientos%20de%20suelos.png" alt="Mayer Movimiento de Suelos"></div></div></section>
+    <section class="contact" id="contacto"><div class="wrap contact-grid"><div class="reveal"><span class="eyebrow">HABLEMOS DE TU PROYECTO</span><h2>Tu próximo verano <em>empieza acá.</em></h2><p>Contanos qué tenés en mente. Te respondemos por WhatsApp para empezar a planearlo juntos.</p><a class="contact-phone" href="https://wa.me/5493562410512" target="_blank" rel="noopener noreferrer">+54 9 3562 41-0512 <span aria-hidden="true">↗</span></a></div><form class="contact-form reveal" id="contact-form"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" required maxlength="80" autocomplete="name" placeholder="¿Cómo te llamás?"><label for="telefono">Tu teléfono</label><input id="telefono" name="telefono" required maxlength="40" type="tel" autocomplete="tel" placeholder="Tu número de contacto"><label for="servicio">¿Qué necesitás?</label><select id="servicio" name="servicio"><option>Construcción de una pileta</option><option>Movimiento de suelos</option><option>Pileta y movimiento de suelos</option><option>Mantenimiento o reparación</option></select><label for="mensaje">Contanos un poco más <span>(opcional)</span></label><textarea id="mensaje" name="mensaje" maxlength="1200" rows="3" placeholder="Tu idea, medidas aproximadas, ubicación…"></textarea><button class="button primary" type="submit">Enviar consulta por WhatsApp <span aria-hidden="true">↗</span></button></form></div></section>
+  </main>
+  <footer><div class="wrap footer-main"><a class="brand" href="#inicio"><img src="IMAGENE/logo.png" alt=""><span>PROYECTO <b>PILETAS</b></span></a><div><a href="#servicios">Servicios</a><a href="#proyectos">Trabajos</a><a href="#contacto">Contacto</a></div></div><div class="wrap footer-bottom"><span>© <span id="year"></span> Proyecto Piletas.</span><a href="admin.html">Administrar trabajos</a><span>Diseño web: Lucas Mayer</span></div></footer>
+  <a class="whatsapp" href="https://wa.me/5493562410512" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">✆</a>
+  <dialog class="lightbox" id="lightbox"><button type="button" class="lightbox-close" aria-label="Cerrar imagen">×</button><img alt=""><div class="lightbox-caption"></div></dialog>
 </body>
 </html>
