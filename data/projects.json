@@ -1,9 +1,72 @@
 [
-  {"id":"original-2","title":"Pileta a medida","category":"Piletas","description":"Un espacio diseñado para disfrutar.","image":"IMAGENE/imagen%202.png"},
-  {"id":"original-3","title":"Un rincón para compartir","category":"Piletas","description":"Diseño y construcción de pileta.","image":"IMAGENE/imagen%203.png"},
-  {"id":"original-4","title":"Proyecto residencial","category":"Piletas","description":"Cada detalle pensado para el espacio.","image":"IMAGENE/imagen%204.png"},
-  {"id":"original-5","title":"Espacio de verano","category":"Piletas","description":"Una pileta hecha para disfrutar.","image":"IMAGENE/imagen%205.png"},
-  {"id":"original-6","title":"Diseño personalizado","category":"Piletas","description":"Un proyecto adaptado a su entorno.","image":"IMAGENE/imagen%206.png"},
-  {"id":"original-7","title":"Pileta y entorno","category":"Piletas","description":"Construcción con atención a cada detalle.","image":"IMAGENE/imagen%207.png"},
-  {"id":"original-8","title":"Obra terminada","category":"Piletas","description":"Espacios para crear recuerdos.","image":"IMAGENE/imagen%208.png"}
+  {
+    "id": "original-2",
+    "title": "Pileta a medida",
+    "category": "Piletas",
+    "description": "Un espacio diseñado para disfrutar.",
+    "image": "IMAGENE/optimized/pileta-2-960.webp",
+    "thumbnail": "IMAGENE/optimized/pileta-2-480.webp",
+    "imageWidth": 960,
+    "fullImage": "IMAGENE/imagen%202.png"
+  },
+  {
+    "id": "original-3",
+    "title": "Un rincón para compartir",
+    "category": "Piletas",
+    "description": "Diseño y construcción de pileta.",
+    "image": "IMAGENE/optimized/pileta-3-960.webp",
+    "thumbnail": "IMAGENE/optimized/pileta-3-480.webp",
+    "imageWidth": 960,
+    "fullImage": "IMAGENE/imagen%203.png"
+  },
+  {
+    "id": "original-4",
+    "title": "Proyecto residencial",
+    "category": "Piletas",
+    "description": "Cada detalle pensado para el espacio.",
+    "image": "IMAGENE/optimized/pileta-4-960.webp",
+    "thumbnail": "IMAGENE/optimized/pileta-4-480.webp",
+    "imageWidth": 720,
+    "fullImage": "IMAGENE/imagen%204.png"
+  },
+  {
+    "id": "original-5",
+    "title": "Espacio de verano",
+    "category": "Piletas",
+    "description": "Una pileta hecha para disfrutar.",
+    "image": "IMAGENE/optimized/pileta-5-960.webp",
+    "thumbnail": "IMAGENE/optimized/pileta-5-480.webp",
+    "imageWidth": 780,
+    "fullImage": "IMAGENE/imagen%205.png"
+  },
+  {
+    "id": "original-6",
+    "title": "Diseño personalizado",
+    "category": "Piletas",
+    "description": "Un proyecto adaptado a su entorno.",
+    "image": "IMAGENE/optimized/pileta-6-960.webp",
+    "thumbnail": "IMAGENE/optimized/pileta-6-480.webp",
+    "imageWidth": 780,
+    "fullImage": "IMAGENE/imagen%206.png"
+  },
+  {
+    "id": "original-7",
+    "title": "Pileta y entorno",
+    "category": "Piletas",
+    "description": "Construcción con atención a cada detalle.",
+    "image": "IMAGENE/optimized/pileta-7-960.webp",
+    "thumbnail": "IMAGENE/optimized/pileta-7-480.webp",
+    "imageWidth": 780,
+    "fullImage": "IMAGENE/imagen%207.png"
+  },
+  {
+    "id": "original-8",
+    "title": "Obra terminada",
+    "category": "Piletas",
+    "description": "Espacios para crear recuerdos.",
+    "image": "IMAGENE/optimized/pileta-8-960.webp",
+    "thumbnail": "IMAGENE/optimized/pileta-8-480.webp",
+    "imageWidth": 780,
+    "fullImage": "IMAGENE/imagen%208.png"
+  }
 ]

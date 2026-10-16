@@ -64,7 +64,7 @@
     if (!projects.length) { $('items').textContent = 'Todavía no hay trabajos publicados.'; return; }
     projects.forEach(item => {
       const row = document.createElement('div'); row.className = 'item';
-      const image = document.createElement('img'); image.src = item.image; image.alt = '';
+      const image = document.createElement('img'); image.src = item.thumbnail || item.image; image.alt = ''; image.loading = 'lazy'; image.decoding = 'async';
       const content = document.createElement('div'); content.className = 'item-body';
       const title = document.createElement('strong'); title.textContent = item.title;
       const category = document.createElement('small'); category.textContent = item.category;
@@ -114,12 +114,12 @@
       const image = new Image();
       image.onload = () => {
         URL.revokeObjectURL(objectUrl);
-        const scale = Math.min(1, 1800 / Math.max(image.naturalWidth, image.naturalHeight));
+        const scale = Math.min(1, 1280 / Math.max(image.naturalWidth, image.naturalHeight));
         const canvas = document.createElement('canvas');
         canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
         canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
         canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
-        canvas.toBlob(blob => blob ? resolve(blob) : reject(Error('No se pudo procesar la foto.')), 'image/jpeg', .78);
+        canvas.toBlob(blob => blob ? resolve(blob) : reject(Error('No se pudo procesar la foto.')), 'image/webp', .80);
       };
       image.onerror = () => { URL.revokeObjectURL(objectUrl); reject(Error('No se pudo abrir esta imagen. Probá con una foto JPG, PNG o WebP.')); };
       image.src = objectUrl;
@@ -162,14 +162,21 @@
       const old = editing ? projects.find(p => p.id === editing) : null;
       if (editing && !old) throw Error('Este trabajo ya no existe. Recargá el panel.');
       let imagePath = old?.image || '';
+      let fullImage = old?.fullImage || old?.image || '';
       if (file) {
         const image = await compress(file);
-        const name = `trabajos/${Date.now()}-${crypto.randomUUID().slice(0, 8)}.jpg`;
+        const extension = image.type === 'image/webp' ? 'webp' : 'png';
+        const name = `trabajos/${Date.now()}-${crypto.randomUUID().slice(0, 8)}.${extension}`;
         notice('Subiendo foto…');
         await request(`/contents/${name}`, { method: 'PUT', body: JSON.stringify({ message: `Agregar foto de trabajo`, content: await blobBase64(image), branch: 'main' }) });
         imagePath = name;
+        const originalExtension = file.type === 'image/jpeg' ? 'jpg' : file.type === 'image/webp' ? 'webp' : file.type === 'image/png' ? 'png' : 'image';
+        const originalName = `trabajos/${Date.now()}-${crypto.randomUUID().slice(0, 8)}-original.${originalExtension}`;
+        notice('Guardando foto original…');
+        await request(`/contents/${originalName}`, { method: 'PUT', body: JSON.stringify({ message: 'Conservar foto original del trabajo', content: await blobBase64(file), branch: 'main' }) });
+        fullImage = originalName;
       }
-      const entry = { id: old?.id || crypto.randomUUID(), title: $('title').value.trim(), category: $('category').value, description: $('description').value.trim(), image: imagePath };
+      const entry = { id: old?.id || crypto.randomUUID(), title: $('title').value.trim(), category: $('category').value, description: $('description').value.trim(), image: imagePath, fullImage, ...(!file && old?.thumbnail ? { thumbnail: old.thumbnail, imageWidth: old.imageWidth } : {}) };
       notice('Publicando en la galería…');
       const next = old ? projects.map(item => item.id === editing ? entry : item) : [entry, ...projects];
       await publish(next, old ? `Actualizar trabajo: ${entry.title}` : `Publicar trabajo: ${entry.title}`);
